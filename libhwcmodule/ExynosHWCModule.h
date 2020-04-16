@@ -19,18 +19,11 @@
 #include <hardware/hwcomposer.h>
 
 #define VSYNC_DEV_PREFIX "/sys/devices/"
-#define VSYNC_DEV_MIDDLE "14850000.sysmmu/14850000.sysmmu/"
-#define VSYNC_DEV_NAME  "14830000.decon_fb/vsync"
+#define VSYNC_DEV_NAME  "13930000.decon_fb/vsync"
 
 #define FIMD_WORD_SIZE_BYTES   16
 #define FIMD_BURSTLEN   16
 #define FIMD_BW_OVERLAP_CHECK
-
-#define TRY_SECOND_VSYNC_DEV
-#ifdef TRY_SECOND_VSYNC_DEV
-#define VSYNC_DEV_NAME2  "exynos5-fb.1/vsync"
-#define VSYNC_DEV_MIDDLE2  "platform/exynos-sysmmu.30/exynos-sysmmu.11/"
-#endif
 
 #define HDMI_RESERVE_MEM_DEV_NAME "/sys/class/ion_cma/ion_video_ext/isolated"
 #define SMEM_PATH "/dev/s5p-smem"
