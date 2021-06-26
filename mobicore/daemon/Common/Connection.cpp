@@ -184,7 +184,7 @@ size_t Connection::writeData(void *buffer, uint32_t len)
     size_t ret = send(socketDescriptor, buffer, len, 0);
     if (ret != len) {
         LOG_ERRNO("could not send all data, because send");
-        LOG_E("ret = %d", ret);
+        LOG_E("ret = %zu", ret);
         ret = -1;
     }
 
